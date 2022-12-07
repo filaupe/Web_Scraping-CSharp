@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtratorDeTabelas.Console", "ExtratorDeTabelas.Console\ExtratorDeTabelas.Console.csproj", "{2A7F7D15-90B9-4A92-B49C-E513A3EA827D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A7F7D15-90B9-4A92-B49C-E513A3EA827D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7F7D15-90B9-4A92-B49C-E513A3EA827D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7F7D15-90B9-4A92-B49C-E513A3EA827D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7F7D15-90B9-4A92-B49C-E513A3EA827D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F9BB837-517C-4B3D-83DE-644F641949D8}
+	EndGlobalSection
+EndGlobal

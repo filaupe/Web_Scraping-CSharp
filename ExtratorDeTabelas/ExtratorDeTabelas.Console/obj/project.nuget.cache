@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SpyBt/NPf4rGT568h6OjGQWxIIK+812l05uTcxn7JWL/RNVwGdc6lZn3VqK3zCB+MZnDeSlEvEs9rV68mTTjXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\Web_Scraping-CSharp\\ExtratorDeTabelas\\ExtratorDeTabelas.Console\\ExtratorDeTabelas.Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\android\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+  ],
+  "logs": []
+}
