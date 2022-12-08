@@ -14,14 +14,14 @@ foreach (var td in tds)
 	local++;
 	if (td.ToString()!.ToLower().Contains("score")) break;
 }
-Regex extrairConteudo = new("<td>(.*?)</td>");
+Regex extrairConteudo = new(@"(<td>.*</td>)");
 var tableList = table.ToList();
 tableList.RemoveAt(0);
 foreach (var tr in tableList)
 {
 	var trTds = reTDS.Matches(tr.ToString()!);
 	var conteudo = extrairConteudo.Matches(trTds[local].ToString());
-	scoreList.Add(conteudo[0].ToString());
+	scoreList.Add(conteudo[0].ToString().Replace("<td>", "").Replace("</td>", ""));
 }
 
 foreach (var item in scoreList)
