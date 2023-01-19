@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-const string ROUTE = @"C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\HTMLScrapping\exemploTable01.html";
+const string ROUTE = @"C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\HTMLScrapping\exemploTable01.html";
 
 HtmlDocument doc = new();
 doc.Load(ROUTE);
@@ -9,7 +9,7 @@ var tables = WebScraping.Console.WebScraping.Tables(doc.Text);
 
 foreach (var table in tables)
 {
-    var count = 0;
+    int count;
     Console.Write("Pré-Visualização da Tabela:");
     Console.Write("\n");
     Console.Write("\n");
@@ -34,6 +34,9 @@ foreach (var table in tables)
             }
         }
     }
-}
 
-tables[0].GetCsvFile("C:\\Users\\MulinhaGPlays\\Desktop\\", "Teste.csv");
+}
+Console.WriteLine("Digite S/N para baixar o arquivo");
+if (Console.ReadLine()!.ToUpper() == "S")
+    tables[0].GetCsvFile(@"C:\Users\android\Desktop", "Teste.csv");
+
