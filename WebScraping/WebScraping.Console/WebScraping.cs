@@ -23,7 +23,7 @@ public class WebScraping
     }
     public static IEnumerable<string> ExtractData(string fileText, string tagName)
     {
-        Regex regex = new ($"<{tagName}*>(.+?)</{tagName}>");
+        Regex regex = new ($"<{tagName}*>(.+?)</{tagName}>"); //<\\s*table[^>]*>(.*?)<\\s*\\/\\s*table>
         fileText = RemoveSpacesAndLineBreaks(fileText);
         fileText = fileText[fileText.IndexOf($"<{tagName}")..(fileText.LastIndexOf($"</{tagName}>") + (3 + tagName.Length))];
         return regex.Split(fileText).Where(x => !String.IsNullOrWhiteSpace(x));

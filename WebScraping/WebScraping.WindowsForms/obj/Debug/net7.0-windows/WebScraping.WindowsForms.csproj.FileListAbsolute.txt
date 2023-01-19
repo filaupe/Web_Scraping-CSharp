@@ -1,0 +1,17 @@
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\bin\Debug\net7.0-windows\WebScraping.WindowsForms.exe
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\bin\Debug\net7.0-windows\WebScraping.WindowsForms.deps.json
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\bin\Debug\net7.0-windows\WebScraping.WindowsForms.runtimeconfig.json
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\bin\Debug\net7.0-windows\WebScraping.WindowsForms.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\bin\Debug\net7.0-windows\WebScraping.WindowsForms.pdb
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.csproj.AssemblyReference.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.WebScrapingWindow.resources
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.csproj.GenerateResource.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.AssemblyInfoInputs.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.AssemblyInfo.cs
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\refint\WebScraping.WindowsForms.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.pdb
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\WebScraping.WindowsForms.genruntimeconfig.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.WindowsForms\obj\Debug\net7.0-windows\ref\WebScraping.WindowsForms.dll

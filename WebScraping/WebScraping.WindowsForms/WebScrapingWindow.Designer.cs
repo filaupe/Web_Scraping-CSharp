@@ -1,6 +1,6 @@
 ﻿namespace WebScraping.WindowsForms
 {
-    partial class Form1
+    partial class WebScrapingWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.UploadBtn = new System.Windows.Forms.Button();
             this.InvalidCpfCount = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataTableView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // UploadBtn
             // 
-            this.button1.Location = new System.Drawing.Point(549, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Upload";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UploadBtn.Location = new System.Drawing.Point(549, 12);
+            this.UploadBtn.Name = "UploadBtn";
+            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
+            this.UploadBtn.TabIndex = 0;
+            this.UploadBtn.Text = "Upload";
+            this.UploadBtn.UseVisualStyleBackColor = true;
+            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
             // 
             // InvalidCpfCount
             // 
@@ -54,27 +55,27 @@
             this.InvalidCpfCount.TabIndex = 1;
             this.InvalidCpfCount.Text = "0 CPFs Inválidos";
             // 
-            // dataGridView1
+            // dataTableView
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(612, 397);
-            this.dataGridView1.TabIndex = 2;
+            this.dataTableView.AllowUserToOrderColumns = true;
+            this.dataTableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTableView.Location = new System.Drawing.Point(12, 41);
+            this.dataTableView.Name = "dataTableView";
+            this.dataTableView.RowTemplate.Height = 25;
+            this.dataTableView.Size = new System.Drawing.Size(612, 397);
+            this.dataTableView.TabIndex = 2;
             // 
-            // Form1
+            // WebScrapingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataTableView);
             this.Controls.Add(this.InvalidCpfCount);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.UploadBtn);
+            this.Name = "WebScrapingWindow";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,8 +83,8 @@
 
         #endregion
 
-        private Button button1;
+        private Button UploadBtn;
         private Label InvalidCpfCount;
-        private DataGridView dataGridView1;
+        private DataGridView dataTableView;
     }
 }
