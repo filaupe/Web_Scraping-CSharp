@@ -1,0 +1,12 @@
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\bin\Debug\net7.0\WebScraping.Library.deps.json
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\bin\Debug\net7.0\WebScraping.Library.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\bin\Debug\net7.0\WebScraping.Library.pdb
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.csproj.AssemblyReference.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.AssemblyInfoInputs.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.AssemblyInfo.cs
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.csproj.CoreCompileInputs.cache
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\refint\WebScraping.Library.dll
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\WebScraping.Library.pdb
+C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Library\obj\Debug\net7.0\ref\WebScraping.Library.dll

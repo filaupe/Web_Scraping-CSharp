@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Lt6AhZAOJgOVAYfVn5DQSm4F1q8CSQ1BSGR12NR04NNTuu18eIKOTro5JqagUXMm4dPiKvdg6XPb+FfLS2DpsQ==",
+  "dgSpecHash": "O4XS9PNahNnHTQ7I7j+r4J11m5iHt48gmVzZm7vkwJWuiM1sxYKo8ibI9chSRU7vktpqUPmYedOFRGmZA2/Vow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.Library\\WebScraping.Library.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\MulinhaGPlays\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.Library\\WebScraping.Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MulinhaGPlays\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

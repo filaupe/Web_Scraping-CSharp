@@ -9,7 +9,8 @@
       "WebScraping.Console/1.0.0": {
         "dependencies": {
           "CsvHelper": "30.0.1",
-          "HtmlAgilityPack": "1.11.46"
+          "HtmlAgilityPack": "1.11.46",
+          "WebScraping.Library": "1.0.0"
         },
         "runtime": {
           "WebScraping.Console.dll": {}
@@ -29,6 +30,14 @@
             "assemblyVersion": "1.11.46.0",
             "fileVersion": "1.11.46.0"
           }
+        }
+      },
+      "WebScraping.Library/1.0.0": {
+        "dependencies": {
+          "CsvHelper": "30.0.1"
+        },
+        "runtime": {
+          "WebScraping.Library.dll": {}
         }
       }
     }
@@ -52,6 +61,11 @@
       "sha512": "sha512-dLMn4EVfJBHWmWK4Uh0XGD76FPLHI0qr2Tm0s1m/xmgiHb1JUb9zB8AzO8HtrkBBlMN6JfCUBYddhqC0hZNR+g==",
       "path": "htmlagilitypack/1.11.46",
       "hashPath": "htmlagilitypack.1.11.46.nupkg.sha512"
+    },
+    "WebScraping.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,11 +1,13 @@
 ﻿using HtmlAgilityPack;
+using WebScraping.Library;
 
-const string ROUTE = @"C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\HTMLScrapping\exemploTable01.html";
+const string ROUTE = @"C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\HTMLScrapping\exemploTable01.html";
 
 HtmlDocument doc = new();
 doc.Load(ROUTE);
 
-var tables = WebScraping.Console.WebScraping.Tables(doc.Text);
+var ws = new WebScrapingMethods();
+var tables = ws.ExtractTables(doc.Text);
 
 foreach (var table in tables)
 {
@@ -38,5 +40,5 @@ foreach (var table in tables)
 }
 Console.WriteLine("Digite S/N para baixar o arquivo");
 if (Console.ReadLine()!.ToUpper() == "S")
-    tables[0].GetCsvFile(@"C:\Users\android\Desktop", "Teste.csv");
+    tables[0].GetCsvFile(@"C:\Users\MulinhaGPlays\Desktop", "Teste.csv");
 
