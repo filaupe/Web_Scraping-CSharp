@@ -35,19 +35,21 @@
             this.delimiterLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.downloadBtn = new System.Windows.Forms.Button();
-            this.FindBtn = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchSiteTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ClearBtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ColumnTextBox = new System.Windows.Forms.TextBox();
+            this.CustomColumnTextBox = new System.Windows.Forms.TextBox();
             this.VerifyBtn = new System.Windows.Forms.Button();
-            this.RegularExpressionTextBox = new System.Windows.Forms.TextBox();
+            this.CustomRegularExpressionTextBox = new System.Windows.Forms.TextBox();
             this.CnpjVariantTextBox = new System.Windows.Forms.TextBox();
             this.EmailVariantTextBox = new System.Windows.Forms.TextBox();
             this.CpfVariantTextBox = new System.Windows.Forms.TextBox();
@@ -120,9 +122,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
             this.groupBox1.Controls.Add(this.downloadBtn);
-            this.groupBox1.Controls.Add(this.FindBtn);
+            this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.SearchSiteTextBox);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.delimiterTextBox);
             this.groupBox1.Controls.Add(this.delimiterLabel);
@@ -147,17 +149,19 @@
             this.downloadBtn.TabIndex = 9;
             this.downloadBtn.Text = "Download";
             this.downloadBtn.UseVisualStyleBackColor = false;
+            this.downloadBtn.Click += new System.EventHandler(this.downloadBtn_Click);
             // 
-            // FindBtn
+            // SearchBtn
             // 
-            this.FindBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindBtn.Location = new System.Drawing.Point(219, 73);
-            this.FindBtn.Name = "FindBtn";
-            this.FindBtn.Size = new System.Drawing.Size(64, 23);
-            this.FindBtn.TabIndex = 8;
-            this.FindBtn.Text = "Buscar";
-            this.FindBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.Location = new System.Drawing.Point(219, 73);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(64, 23);
+            this.SearchBtn.TabIndex = 8;
+            this.SearchBtn.Text = "Buscar";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // label1
             // 
@@ -168,27 +172,29 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Site que terá a tabela resgatada:";
             // 
-            // textBox1
+            // SearchSiteTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(6, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 23);
-            this.textBox1.TabIndex = 6;
+            this.SearchSiteTextBox.BackColor = System.Drawing.Color.White;
+            this.SearchSiteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchSiteTextBox.Location = new System.Drawing.Point(6, 73);
+            this.SearchSiteTextBox.Name = "SearchSiteTextBox";
+            this.SearchSiteTextBox.Size = new System.Drawing.Size(207, 23);
+            this.SearchSiteTextBox.TabIndex = 6;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.ClearBtn);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.ColumnTextBox);
+            this.groupBox2.Controls.Add(this.CustomColumnTextBox);
             this.groupBox2.Controls.Add(this.VerifyBtn);
-            this.groupBox2.Controls.Add(this.RegularExpressionTextBox);
+            this.groupBox2.Controls.Add(this.CustomRegularExpressionTextBox);
             this.groupBox2.Controls.Add(this.CnpjVariantTextBox);
             this.groupBox2.Controls.Add(this.EmailVariantTextBox);
             this.groupBox2.Controls.Add(this.CpfVariantTextBox);
@@ -200,17 +206,38 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Cyan;
             this.groupBox2.Location = new System.Drawing.Point(6, 147);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(277, 126);
+            this.groupBox2.Size = new System.Drawing.Size(277, 153);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Verificar";
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearBtn.Location = new System.Drawing.Point(202, 112);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(64, 23);
+            this.ClearBtn.TabIndex = 20;
+            this.ClearBtn.Text = "Limpar";
+            this.ClearBtn.UseVisualStyleBackColor = false;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 15);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Filtro Cutomizado:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(84, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 15);
+            this.label7.Size = new System.Drawing.Size(101, 15);
             this.label7.TabIndex = 19;
             this.label7.Text = "Expressão Regular";
             // 
@@ -259,34 +286,35 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Variante";
             // 
-            // ColumnTextBox
+            // CustomColumnTextBox
             // 
-            this.ColumnTextBox.BackColor = System.Drawing.Color.White;
-            this.ColumnTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ColumnTextBox.Location = new System.Drawing.Point(6, 97);
-            this.ColumnTextBox.Name = "ColumnTextBox";
-            this.ColumnTextBox.Size = new System.Drawing.Size(72, 23);
-            this.ColumnTextBox.TabIndex = 14;
+            this.CustomColumnTextBox.BackColor = System.Drawing.Color.White;
+            this.CustomColumnTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CustomColumnTextBox.Location = new System.Drawing.Point(6, 97);
+            this.CustomColumnTextBox.Name = "CustomColumnTextBox";
+            this.CustomColumnTextBox.Size = new System.Drawing.Size(72, 23);
+            this.CustomColumnTextBox.TabIndex = 14;
             // 
             // VerifyBtn
             // 
             this.VerifyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.VerifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VerifyBtn.Location = new System.Drawing.Point(202, 97);
+            this.VerifyBtn.Location = new System.Drawing.Point(202, 83);
             this.VerifyBtn.Name = "VerifyBtn";
             this.VerifyBtn.Size = new System.Drawing.Size(64, 23);
             this.VerifyBtn.TabIndex = 10;
             this.VerifyBtn.Text = "Verificar";
             this.VerifyBtn.UseVisualStyleBackColor = false;
+            this.VerifyBtn.Click += new System.EventHandler(this.VerifyBtn_Click);
             // 
-            // RegularExpressionTextBox
+            // CustomRegularExpressionTextBox
             // 
-            this.RegularExpressionTextBox.BackColor = System.Drawing.Color.White;
-            this.RegularExpressionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RegularExpressionTextBox.Location = new System.Drawing.Point(84, 97);
-            this.RegularExpressionTextBox.Name = "RegularExpressionTextBox";
-            this.RegularExpressionTextBox.Size = new System.Drawing.Size(112, 23);
-            this.RegularExpressionTextBox.TabIndex = 10;
+            this.CustomRegularExpressionTextBox.BackColor = System.Drawing.Color.White;
+            this.CustomRegularExpressionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CustomRegularExpressionTextBox.Location = new System.Drawing.Point(84, 97);
+            this.CustomRegularExpressionTextBox.Name = "CustomRegularExpressionTextBox";
+            this.CustomRegularExpressionTextBox.Size = new System.Drawing.Size(112, 23);
+            this.CustomRegularExpressionTextBox.TabIndex = 10;
             // 
             // CnpjVariantTextBox
             // 
@@ -333,6 +361,7 @@
             this.CnpjCheckbox.TabIndex = 4;
             this.CnpjCheckbox.Text = "CNPJ";
             this.CnpjCheckbox.UseVisualStyleBackColor = true;
+            this.CnpjCheckbox.CheckedChanged += new System.EventHandler(this.CnpjCheckbox_CheckedChanged);
             // 
             // EmailCheckBox
             // 
@@ -343,16 +372,18 @@
             this.EmailCheckBox.TabIndex = 3;
             this.EmailCheckBox.Text = "Email";
             this.EmailCheckBox.UseVisualStyleBackColor = true;
+            this.EmailCheckBox.CheckedChanged += new System.EventHandler(this.EmailCheckBox_CheckedChanged);
             // 
             // PhoneCheckBox
             // 
             this.PhoneCheckBox.AutoSize = true;
             this.PhoneCheckBox.Location = new System.Drawing.Point(70, 22);
             this.PhoneCheckBox.Name = "PhoneCheckBox";
-            this.PhoneCheckBox.Size = new System.Drawing.Size(70, 19);
+            this.PhoneCheckBox.Size = new System.Drawing.Size(71, 19);
             this.PhoneCheckBox.TabIndex = 2;
             this.PhoneCheckBox.Text = "Telefone";
             this.PhoneCheckBox.UseVisualStyleBackColor = true;
+            this.PhoneCheckBox.CheckedChanged += new System.EventHandler(this.PhoneCheckBox_CheckedChanged);
             // 
             // CpfCheckBox
             // 
@@ -396,9 +427,9 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Button downloadBtn;
-        private Button FindBtn;
+        private Button SearchBtn;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox SearchSiteTextBox;
         private CheckBox CnpjCheckbox;
         private CheckBox EmailCheckBox;
         private CheckBox PhoneCheckBox;
@@ -409,12 +440,14 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox ColumnTextBox;
+        private TextBox CustomColumnTextBox;
         private Button VerifyBtn;
-        private TextBox RegularExpressionTextBox;
+        private TextBox CustomRegularExpressionTextBox;
         private TextBox CnpjVariantTextBox;
         private TextBox EmailVariantTextBox;
         private TextBox CpfVariantTextBox;
         private TextBox PhoneVariantTextBox;
+        private Label label8;
+        private Button ClearBtn;
     }
 }

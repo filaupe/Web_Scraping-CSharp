@@ -1,16 +1,13 @@
-﻿using HtmlAgilityPack;
-using WebScraping.Library;
+﻿using WebScraping.Library;
 
-const string ROUTE = @"C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\HTMLScrapping\exemploTable01.html";
+using HttpClient client = new();
+var result = await client.GetAsync("https://getbootstrap.com/docs/5.3/content/tables/#accented-tables");
+var content = await result.Content.ReadAsStringAsync();
 
-HtmlDocument doc = new();
-doc.Load(ROUTE);
+var table = WebScrapingMethods.ExtractTable(content);
 
-var ws = new WebScrapingMethods();
-var tables = ws.ExtractTables(doc.Text);
-
-foreach (var table in tables)
-{
+//foreach (var table in tables)
+//{
     int count;
     Console.Write("Pré-Visualização da Tabela:");
     Console.Write("\n");
@@ -24,7 +21,7 @@ foreach (var table in tables)
     if (table.Body != null)
     {
         count = 0;
-        foreach (var field in table.Body)
+        foreach (var field in table.Body!)
         {
             count++;
             Console.Write(field);
@@ -36,9 +33,8 @@ foreach (var table in tables)
             }
         }
     }
-
-}
+//}
 Console.WriteLine("Digite S/N para baixar o arquivo");
 if (Console.ReadLine()!.ToUpper() == "S")
-    tables[0].GetCsvFile(@"C:\Users\MulinhaGPlays\Desktop", "Teste.csv");
+    table.GetCsvFile(@"C:\Users\android\Desktop\Teste.csv");
 

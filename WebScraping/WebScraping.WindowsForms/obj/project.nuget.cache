@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5a6BLnq7NXSU4Wad55qSR4EtA1oJX7v/sNXUYt/zcC+62DZqBzLKpbfJ8NEkp2JiPdRk9ZoipxURtTDjfaJbyQ==",
+  "dgSpecHash": "sslHYiweYrObzq1xMUvqexAnF4A1+G4wcOrHZ36+hOaJRrCHGk8Gitj0uWPAQz7VD03RYxisNhUxxPrny/vkEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MulinhaGPlays\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.WindowsForms\\WebScraping.WindowsForms.csproj",
+  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.WindowsForms\\WebScraping.WindowsForms.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\MulinhaGPlays\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\android\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }

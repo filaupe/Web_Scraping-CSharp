@@ -11,7 +11,7 @@ namespace WebScraping.Library.Models
 
         public IEnumerable<string>? Body { get; set; }
 
-        public void GetCsvFile(string filePath, string fileName)
+        public void GetCsvFile(string fileName)
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -19,7 +19,7 @@ namespace WebScraping.Library.Models
                 Encoding = Encoding.UTF8,
             };
 
-            using var streamWriter = new StreamWriter(Path.Combine(filePath, fileName));
+            using var streamWriter = new StreamWriter(fileName);
             using var csv = new CsvWriter(streamWriter, config);
             int count = 0;
             foreach (var header in Header)

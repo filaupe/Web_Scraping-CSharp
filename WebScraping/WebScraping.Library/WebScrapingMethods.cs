@@ -6,21 +6,32 @@ namespace WebScraping.Library
 {
     public static class WebScrapingMethods
     {
-        public static List<TableModel> ExtractTables(string fileText)
+        public static TableModel ExtractTable(string fileText)
         {
-            List<TableModel> formatTables = new();
-            var tables = ExtractDataInTags(fileText, "table");
-            tables = tables.Select(table => table = String.Join(String.Empty, ExtractDataInTags(table, "tr")));
-            foreach (var table in tables)
+            int a = 0;
+            var tables = ExtractDataInTableTag(fileText, "table");
+
+            var head = tables.Select(table => table = String.Join(String.Empty, ExtractDataInTags(table, "thead"))).ToList();
+            head = head.Select(table => table = String.Join(String.Empty, ExtractDataInTags(table, "tr"))).ToList();
+            head = ExtractDataInTags(String.Join(String.Empty, head), "th").ToList();
+            head.RemoveAt(0);
+
+            var body = tables.Select(table => table = String.Join(String.Empty, ExtractDataInTags(table, "tbody"))).ToList();
+            body = body.Select(table => table = String.Join(String.Empty, ExtractDataInTags(table, "tr"))).ToList();
+            body = ExtractDataInTags(String.Join(String.Empty, body), "td").ToList();
+
+            if (body.Any(c => c.Contains("th")))
             {
-                var model = new TableModel
-                {
-                    Header = ExtractDataInTags(table, "th"),
-                    Body = ExtractDataInTags(table, "td")
-                };
-                formatTables.Add(model);
+                foreach (var item in body.ToList())
+                    if (item.Contains("<th"))
+                        body.Remove(item);
             }
-            return formatTables;
+
+            return new TableModel
+            {
+                Header = head,
+                Body = body
+            };
         }
         public static string ReadFile(string path)
         {
@@ -29,10 +40,9 @@ namespace WebScraping.Library
             string? line;
             while ((line = file.ReadLine()) != null)
                 archive.AppendLine(line);
-            file.Close();
+            file.Close();  
             return archive.ToString();
         }
-
         public static (string, List<string>) ToTableStrings(this string archive)
         {
             var data = archive.Replace("\r\n", "\n").Split("\n").Where(c => !String.IsNullOrWhiteSpace(c)).ToList();
@@ -41,14 +51,20 @@ namespace WebScraping.Library
             List<string> body = data;
             return (header, body);
         }
-        public static IEnumerable<string> ExtractDataInTags(string fileText, string tagName)
+        public static IEnumerable<string> ExtractDataInTableTag(string fileText, string tagName)
         {
             Regex regex = new($"<{tagName}*>(.+?)</{tagName}>"); //<\\s*{tagName}[^>]*>(.*?)<\\s*\\/\\s*{tagName}>
+            fileText = RemoveSpacesAndLineBreaks(fileText);
+            fileText = fileText[fileText.IndexOf($"<{tagName}")..(fileText.IndexOf($"</{tagName}>") + (3 + tagName.Length))];
+            return regex.Split(fileText).Where(x => !String.IsNullOrWhiteSpace(x));
+        }
+        public static IEnumerable<string> ExtractDataInTags(string fileText, string tagName)
+        {
+            Regex regex = new($"<\\s*{tagName}[^>]*>(.*?)<\\s*\\/\\s*{tagName}>"); //<{tagName}*>(.+?)</{tagName}>
             fileText = RemoveSpacesAndLineBreaks(fileText);
             fileText = fileText[fileText.IndexOf($"<{tagName}")..(fileText.LastIndexOf($"</{tagName}>") + (3 + tagName.Length))];
             return regex.Split(fileText).Where(x => !String.IsNullOrWhiteSpace(x));
         }
-        public static string ExtractDataInTag(string fileText, string tagName) => ExtractDataInTags(fileText, tagName).ToArray()[0];
         public static string RemoveSpacesAndLineBreaks(string text)
             => String.Join(String.Empty, String.Join(String.Empty, text.Split("\r")).Split("\n").Select(c => c.Trim()));
     }

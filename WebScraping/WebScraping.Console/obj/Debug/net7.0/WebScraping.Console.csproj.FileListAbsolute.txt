@@ -36,3 +36,5 @@ C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Co
 C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Console\obj\Debug\net7.0\ref\WebScraping.Console.dll
 C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Console\bin\Debug\net7.0\WebScraping.Library.dll
 C:\Users\MulinhaGPlays\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Console\bin\Debug\net7.0\WebScraping.Library.pdb
+C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Console\bin\Debug\net7.0\WebScraping.Library.dll
+C:\Users\android\Documents\GitHub\Web_Scraping-CSharp\WebScraping\WebScraping.Console\bin\Debug\net7.0\WebScraping.Library.pdb
