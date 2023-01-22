@@ -149,7 +149,7 @@
             this.downloadBtn.TabIndex = 9;
             this.downloadBtn.Text = "Download";
             this.downloadBtn.UseVisualStyleBackColor = false;
-            this.downloadBtn.Click += new System.EventHandler(this.downloadBtn_Click);
+            this.downloadBtn.Click += new System.EventHandler(this.DownloadBtn_Click);
             // 
             // SearchBtn
             // 

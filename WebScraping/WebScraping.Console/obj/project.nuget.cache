@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2QDfnOpdDea72qfmV/22Xvp6fTQe8ZIpYCg3PWi267qXydjqjSlDGIOs8CNvSZHutdMjVbePcTrTIidZnAzFOg==",
+  "dgSpecHash": "F3e77OQF5uk2Qv5zNuLI/d3WdoF1yKDlG7yc9hO0ATOEbQT0i1ATvKVIYAMonLejAnC32nEah0ahVwd7/WYUrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.Console\\WebScraping.Console.csproj",
+  "projectFilePath": "C:\\Users\\MulinhaGPlays\\Documents\\GitHub\\Web_Scraping-CSharp\\WebScraping\\WebScraping.Console\\WebScraping.Console.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\android\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
-    "C:\\Users\\android\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+    "C:\\Users\\MulinhaGPlays\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\MulinhaGPlays\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
   ],
   "logs": []
 }
